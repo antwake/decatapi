@@ -1,36 +1,30 @@
-# Project Title
+# Decatapi
 
-API permettant d'exposer les Conseillers Décathlon
+API to expose Decathlon advisors
 
 ## Getting Started
 
-Instructions pour tester le projet en mode développement.
+Instructions to test the project in dev mode
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-
-```
-Give examples
-```
+You'll need Docker to install Prestashop and MariaDB
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+Run a MariaDB container
 
 ```
-Give the example
+docker run -ti --name mariadeca -e MYSQL_ROOT_PASSWORD=admin -p 3306:3306 -d mariadb
 ```
 
-And repeat
+Run a Prestashop container (will get the latest Prestashop version 1.7.3)
 
 ```
-until finished
+docker run -ti --name decathlon --link mariadeca:mysql -e DB_SERVER=mariadeca -e PS_DOMAIN=localhost:8080 -p 8080:80 -d prestashop/prestashop
 ```
 
+Start Prestashop installation [http://localhost:8080/](http://localhost:8080/)
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
