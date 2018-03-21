@@ -26,4 +26,4 @@ docker run -ti --name decathlon --link mariadeca:mysql -e DB_SERVER=mariadeca -e
 
 Start Prestashop installation [http://localhost:8080/](http://localhost:8080/)
 
-At the databse configuration step, enter mariadeca in the *Configure your database* field
+At the databse configuration step, enter *mariadeca* in the *Configure your database* field
