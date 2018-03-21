@@ -59,3 +59,16 @@ $ npm start
 ```
 
 You can access the docs there [http://localhost:3000/apidoc/v1/](http://localhost:3000/apidoc/v1/) and use Postman to test the API.
+
+### TODO
+
+- [ ] Get Advisor by :id
+- [ ] Create token access (jwt) for public access or user ps_webservice_account table
+- [ ] Prestashop admin user authentication for advisor creation
+- [ ] Field validation
+- [ ] Pagination
+- [ ] Create "Contact Type" field
+- [ ] Extend Employee object instead of using the Advisor table
+- [ ] Create new type of Employee
+- [ ] Create Prestashop module
+- [ ] Expose GraphQL because it's 2018 :)
